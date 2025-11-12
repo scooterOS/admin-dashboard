@@ -1,3 +1,6 @@
+@import url(https://fonts.googleapis.com/css?family=Instrument+Sans);
+@import url(https://fonts.googleapis.com/css?family=Cantata+One);
+
 * {
     margin: 0;
     padding: 0;
@@ -14,9 +17,10 @@
 #container {
     display: grid;
     grid-template-columns: 280px 1fr;
-    grid-template-rows: 180px 5fr;
+    grid-template-rows: 180px 1fr;
     width: 100vw;
     min-height: 100vh;
+    overflow: hidden;
 }
 
 #sidebar {
@@ -51,6 +55,25 @@
     grid-row: 2 / 3;
 }
 
+/* font styles */
+
+h1, h2 {
+    font-family: 'Cantata One', 'Georgia', serif;
+}
+
+h3, h4, h5 {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h5 {
+    font-size: 16px;
+}
+
+p, label {
+    font-family: 'Instrument Sans', 'Lucida Sans', sans;
+    font-size: 16px;
+}
+
 /* general styles */
 
 .small {
@@ -75,10 +98,11 @@ button:hover {
     cursor: pointer;
 }
 
-/* font styles */
-
-p, label {
-    font-size: 20px;
+hr {
+  display: block;
+  margin: 8px auto;
+  border-style: inset;
+  border-width: 1px;
 }
 
 /* sidebar */
@@ -179,6 +203,7 @@ p, label {
     border-left: 4px solid gold;
     border-right: 4px solid gold;
     padding: 16px 8px;
+    overflow: hidden;
 }
 
 .bottom-card {
@@ -190,6 +215,7 @@ p, label {
 
 .bottom-card .icon {
     margin: 0 8px;
+    background-color: white;
 }
 
 #announcements {
@@ -202,6 +228,25 @@ p, label {
     grid-row: 2 / 3;
     grid-column: 2 / 3;
     padding: 20px 20px 0 0;
+    margin-top: -12px;
+}
+
+.column {
+    background-color: white;
+    overflow: hidden;
+    height: calc(100% - 35px);
+    padding: 8px;
+}
+
+.column > a > div {
+    margin: 8px 0;
+}
+
+.shoutout {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 12px;
+    align-items: center;
 }
 
 /* animations */
